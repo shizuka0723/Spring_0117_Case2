@@ -18,11 +18,21 @@ public class App {
 //        service.getClassifyRepository().save(new Classify("匯率", Boolean.TRUE));
 //        service.getClassifyRepository().save(new Classify("指數", Boolean.FALSE));
 
-        Classify classify = service.getClassifyRepository().findById(1L).get();
-        TStock tStock = new TStock();
-        tStock.setSymbol("2330.TW");
-        tStock.setName("台積電");
-        tStock.setClassify(classify);
-        service.gettStockRepository().save(tStock);
+//        Classify classify = service.getClassifyRepository().findById(3L).get();
+//        TStock tStock = new TStock();
+//        tStock.setSymbol("^IXIC");
+//        tStock.setName("Nasdaq");
+//        tStock.setClassify(classify);
+//        service.gettStockRepository().save(tStock);
+
+        //抓單筆
+//        Classify classify = service.getClassifyRepository().findById(1L).get();
+//        classify.gettStocks().size();
+//        System.out.println(classify.gettStocks());
+        //抓多筆
+        service.getClassifyRepository().findAll().forEach(c->{
+            c.gettStocks().size();
+            System.out.println(c.getName() + " : " + c.gettStocks());
+        });
     }
 }
