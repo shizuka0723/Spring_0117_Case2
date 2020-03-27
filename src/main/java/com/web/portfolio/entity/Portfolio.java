@@ -46,7 +46,8 @@ public class Portfolio implements Serializable {
     @JsonIgnoreProperties("portfolios")
     private Investor investor;
     
-    @OneToOne(cascade = CascadeType.ALL)
+//    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "tStock_id", 
                 foreignKey = @ForeignKey(name="tStock_fk", 
                                          value = ConstraintMode.CONSTRAINT))
