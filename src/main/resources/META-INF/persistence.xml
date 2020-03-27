@@ -4,6 +4,9 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>com.web.portfolio.entity.Classify</class>
     <class>com.web.portfolio.entity.TStock</class>
+    <class>com.web.portfolio.entity.Investor</class>
+    <class>com.web.portfolio.entity.Portfolio</class>
+    <class>com.web.portfolio.entity.Watch</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/portfolio?serverTimezone=UTC&amp;characterEncoding=utf-8&amp;useUnicode=true"/>
